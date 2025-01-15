@@ -8,8 +8,9 @@ from PyQt6.QtCore import Qt
 import sqlite3
 import requests
 
+# Utility function for resource path handling
 def resource_path(relative_path):
-    return relative_path  # Update this as needed for resource management.
+    return relative_path  # Update for packaged apps if needed.
 
 # Database setup
 def create_database():
@@ -64,6 +65,7 @@ def clear_user_data():
     conn.commit()
     conn.close()
 
+# Login Page
 class LoginPage(QWidget):
     def __init__(self, parent):
         super().__init__()
@@ -95,7 +97,6 @@ class LoginPage(QWidget):
 
         try:
             response = requests.post("https://anzaar-api.bitcommerz.com/api/v1/auth/admin/pos/login", json={"email": email, "password": password})
-            print(response.status_code)
             if response.status_code == 201:
                 data = response.json()
                 save_user_data(data)
@@ -106,90 +107,26 @@ class LoginPage(QWidget):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Failed to connect to the server: {e}")
 
-# class MainWindow(QMainWindow):
-#     def __init__(self):
-#         super().__init__()
-#         self.setWindowTitle("POS")
-#         self.resize(1480, 680)
-
-#         self.navBar = QHBoxLayout()
-
-#         left_nav = QHBoxLayout()
-#         logo_label = QLabel()
-#         pixmp_logo = QPixmap(resource_path("assets/logo.jpg"))
-#         logo_label.setPixmap(pixmp_logo.scaled(100, 100, Qt.AspectRatioMode.KeepAspectRatio))
-#         logo_label.setStyleSheet("padding-right:20px")
-#         left_nav.addWidget(logo_label)
-
-#         self.buttons = {
-#             "Home": QPushButton("Home"),
-#             "Orders": QPushButton("Orders"),
-#             "POS Terminal": QPushButton("POS Terminal"),
-#             "Products": QPushButton("Products"),
-#             "Customers": QPushButton("Customers"),
-#             "Staff": QPushButton("Staff"),
-#             "Settings": QPushButton("Settings")
-#         }
-
-#         self.default_btn_style = "padding:10px;font-size:25px;border:none;color:black"
-#         self.active_btn_style = "padding:10px;font-size:25px;border:none;color:blue"
-
-#         for name, btn in self.buttons.items():
-#             btn.setStyleSheet(self.default_btn_style)
-#             btn.clicked.connect(lambda checked, n=name: self.set_active_button(n))
-#             left_nav.addWidget(btn)
-
-#         right_nav = QHBoxLayout()
-#         profile_label = QLabel("User")
-#         right_nav.addWidget(profile_label)
-
-#         self.navBar.addLayout(left_nav)
-#         self.navBar.addLayout(right_nav)
-
-#         nav_container = QWidget()
-#         nav_container.setLayout(self.navBar)
-
-#         self.pages = QStackedWidget()
-#         for page_name in self.buttons.keys():
-#             page = QLabel(f"Welcome to {page_name}")
-#             page.setAlignment(Qt.AlignmentFlag.AlignCenter)
-#             self.pages.addWidget(page)
-
-#         main_layout = QVBoxLayout()
-#         main_layout.addWidget(nav_container)
-#         main_layout.addWidget(self.pages)
-
-#         container = QWidget()
-#         container.setLayout(main_layout)
-#         self.setCentralWidget(container)
-
-#         user = get_user_data()
-#         if not user:
-#             self.show_login_page()
-
-#     def show_login_page(self):
-#         self.login_page = LoginPage(self)
-#         self.setCentralWidget(self.login_page)
-
-#     def show_main_window(self):
-#         self.__init__()
-#         self.show()
-
-#     def set_active_button(self, active_name):
-#         for name, btn in self.buttons.items():
-#             btn.setStyleSheet(self.default_btn_style)
-#         self.buttons[active_name].setStyleSheet(self.active_btn_style)
-#         self.pages.setCurrentIndex(list(self.buttons.keys()).index(active_name))
-
-
+# Main Window
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("POS")
         self.resize(1480, 680)
+        self.navBar = None
+        self.pages = None
+        self.user_name_label = None
+        self.logout_button = None
+        self.buttons = {}
+        self.init_ui()
+        user = get_user_data()
+        if not user:
+            self.show_login_page()
 
+    def init_ui(self):
         self.navBar = QHBoxLayout()
 
+        # Left navigation section (logo and buttons)
         left_nav = QHBoxLayout()
         logo_label = QLabel()
         pixmp_logo = QPixmap(resource_path("assets/logo.jpg"))
@@ -215,9 +152,20 @@ class MainWindow(QMainWindow):
             btn.clicked.connect(lambda checked, n=name: self.set_active_button(n))
             left_nav.addWidget(btn)
 
+        # Right navigation section (profile and logout)
         right_nav = QHBoxLayout()
-        profile_label = QLabel("User")
-        right_nav.addWidget(profile_label)
+
+        profile_logo = QLabel()
+        pixmp_profile = QPixmap(resource_path("assets/profile_icon.png"))
+        profile_logo.setPixmap(pixmp_profile.scaled(50, 50, Qt.AspectRatioMode.KeepAspectRatio))
+        profile_logo.setStyleSheet("margin-right:10px")
+        right_nav.addWidget(profile_logo)
+
+        user = get_user_data()
+        user_name = f"{user[1]} {user[2]}" if user else "Guest"
+        self.user_name_label = QLabel(user_name)
+        self.user_name_label.setStyleSheet("font-size:18px;font-weight:bold;")
+        right_nav.addWidget(self.user_name_label)
 
         self.logout_button = QPushButton("Logout")
         self.logout_button.setStyleSheet("padding:10px;font-size:15px;color:red;border:none")
@@ -244,17 +192,18 @@ class MainWindow(QMainWindow):
         container.setLayout(main_layout)
         self.setCentralWidget(container)
 
-        user = get_user_data()
-        if not user:
-            self.show_login_page()
-
     def show_login_page(self):
         self.login_page = LoginPage(self)
         self.setCentralWidget(self.login_page)
 
     def show_main_window(self):
-        self.__init__()
-        self.show()
+        self.init_ui()
+        self.update_user_info()
+
+    def update_user_info(self):
+        user = get_user_data()
+        user_name = f"{user[1]} {user[2]}" if user else "Guest"
+        self.user_name_label.setText(user_name)
 
     def set_active_button(self, active_name):
         for name, btn in self.buttons.items():
@@ -270,13 +219,13 @@ class MainWindow(QMainWindow):
             QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
         )
         if confirm == QMessageBox.StandardButton.Yes:
-            clear_user_data()  # Clear user data from the database
+            clear_user_data()
             self.show_login_page()
 
-
+# App Execution
 if __name__ == "__main__":
     create_database()
     app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
+    main_window = MainWindow()
+    main_window.show()
     sys.exit(app.exec())
