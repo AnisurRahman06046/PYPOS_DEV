@@ -108,6 +108,248 @@ class LoginPage(QWidget):
             QMessageBox.critical(self, "Error", f"Failed to connect to the server: {e}")
 
 # Main Window
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.setWindowTitle("POS")
+#         self.resize(1480, 680)
+#         self.navBar = None
+#         self.pages = None
+#         self.user_name_label = None
+#         self.logout_button = None
+#         self.buttons = {}
+#         self.init_ui()
+#         user = get_user_data()
+#         if not user:
+#             self.show_login_page()
+
+#     def init_ui(self):
+#         self.navBar = QHBoxLayout()
+
+#         # Left navigation section (logo and buttons)
+#         left_nav = QHBoxLayout()
+#         logo_label = QLabel()
+#         pixmp_logo = QPixmap(resource_path("assets/logo.jpg"))
+#         logo_label.setPixmap(pixmp_logo.scaled(100, 100, Qt.AspectRatioMode.KeepAspectRatio))
+#         logo_label.setStyleSheet("padding-right:20px")
+#         left_nav.addWidget(logo_label)
+
+#         self.buttons = {
+#             "Home": QPushButton("Home"),
+#             "Orders": QPushButton("Orders"),
+#             "POS Terminal": QPushButton("POS Terminal"),
+#             "Products": QPushButton("Products"),
+#             "Customers": QPushButton("Customers"),
+#             "Staff": QPushButton("Staff"),
+#             "Settings": QPushButton("Settings")
+#         }
+
+#         self.default_btn_style = "padding:10px;font-size:25px;border:none;color:black"
+#         self.active_btn_style = "padding:10px;font-size:25px;border:none;color:blue"
+
+#         for name, btn in self.buttons.items():
+#             btn.setStyleSheet(self.default_btn_style)
+#             btn.clicked.connect(lambda checked, n=name: self.set_active_button(n))
+#             left_nav.addWidget(btn)
+
+#         # Right navigation section (profile and logout)
+#         right_nav = QHBoxLayout()
+
+#         profile_logo = QLabel()
+#         pixmp_profile = QPixmap(resource_path("assets/profile.png"))
+#         profile_logo.setPixmap(pixmp_profile.scaled(50, 50, Qt.AspectRatioMode.KeepAspectRatio))
+#         profile_logo.setStyleSheet("margin-right:10px")
+#         right_nav.addWidget(profile_logo)
+
+#         user = get_user_data()
+#         user_name = f"{user[1]} {user[2]}" if user else "Guest"
+#         self.user_name_label = QLabel(user_name)
+#         self.user_name_label.setStyleSheet("font-size:18px;font-weight:bold;")
+#         right_nav.addWidget(self.user_name_label)
+
+#         self.logout_button = QPushButton("Logout")
+#         self.logout_button.setStyleSheet("padding:10px;font-size:15px;color:red;border:none")
+#         self.logout_button.clicked.connect(self.logout)
+#         right_nav.addWidget(self.logout_button)
+
+#         self.navBar.addLayout(left_nav)
+#         self.navBar.addLayout(right_nav)
+
+#         nav_container = QWidget()
+#         nav_container.setLayout(self.navBar)
+
+#         self.pages = QStackedWidget()
+#         for page_name in self.buttons.keys():
+#             page = QLabel(f"Welcome to {page_name}")
+#             page.setAlignment(Qt.AlignmentFlag.AlignCenter)
+#             self.pages.addWidget(page)
+
+#         main_layout = QVBoxLayout()
+#         main_layout.addWidget(nav_container)
+#         main_layout.addWidget(self.pages)
+
+#         container = QWidget()
+#         container.setLayout(main_layout)
+#         self.setCentralWidget(container)
+
+#     def show_login_page(self):
+#         self.login_page = LoginPage(self)
+#         self.setCentralWidget(self.login_page)
+
+#     def show_main_window(self):
+#         self.init_ui()
+#         self.update_user_info()
+
+#     def update_user_info(self):
+#         user = get_user_data()
+#         user_name = f"{user[1]} {user[2]}" if user else "Guest"
+#         self.user_name_label.setText(user_name)
+
+#     def set_active_button(self, active_name):
+#         for name, btn in self.buttons.items():
+#             btn.setStyleSheet(self.default_btn_style)
+#         self.buttons[active_name].setStyleSheet(self.active_btn_style)
+#         self.pages.setCurrentIndex(list(self.buttons.keys()).index(active_name))
+
+#     def logout(self):
+#         confirm = QMessageBox.question(
+#             self,
+#             "Confirm Logout",
+#             "Are you sure you want to log out?",
+#             QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+#         )
+#         if confirm == QMessageBox.StandardButton.Yes:
+#             clear_user_data()
+#             self.show_login_page()
+
+
+
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.setWindowTitle("POS")
+#         self.resize(1480, 680)
+#         self.navBar = None
+#         self.pages = None
+#         self.user_name_label = None
+#         self.logout_button = None
+#         self.buttons = {}
+#         self.init_ui()
+#         user = get_user_data()
+#         if not user:
+#             self.show_login_page()
+
+#     def init_ui(self):
+#         self.navBar = QHBoxLayout()
+
+#         # Left navigation section (logo and buttons)
+#         left_nav = QHBoxLayout()
+#         logo_label = QLabel()
+#         pixmp_logo = QPixmap(resource_path("assets/logo.jpg"))
+#         logo_label.setPixmap(pixmp_logo.scaled(100, 100, Qt.AspectRatioMode.KeepAspectRatio))
+#         logo_label.setStyleSheet("padding-right:20px")
+#         left_nav.addWidget(logo_label)
+
+#         self.buttons = {
+#             "Home": QPushButton("Home"),
+#             "Orders": QPushButton("Orders"),
+#             "POS Terminal": QPushButton("POS Terminal"),
+#             "Products": QPushButton("Products"),
+#             "Customers": QPushButton("Customers"),
+#             "Staff": QPushButton("Staff"),
+#             "Settings": QPushButton("Settings")
+#         }
+
+#         self.default_btn_style = "padding:10px;font-size:25px;border:none;color:black"
+#         self.active_btn_style = "padding:10px;font-size:25px;border:none;color:blue"
+
+#         for name, btn in self.buttons.items():
+#             btn.setStyleSheet(self.default_btn_style)
+#             btn.clicked.connect(lambda checked, n=name: self.set_active_button(n))
+#             left_nav.addWidget(btn)
+
+#         # Right navigation section (profile and logout)
+#         right_nav = QHBoxLayout()
+
+#         profile_logo = QLabel()
+#         pixmp_profile = QPixmap(resource_path("assets/profile.png"))
+#         profile_logo.setPixmap(pixmp_profile.scaled(50, 50, Qt.AspectRatioMode.KeepAspectRatio))
+#         profile_logo.setStyleSheet("margin-right:10px")
+#         profile_logo.mousePressEvent = self.toggle_profile_info  # Set the click event for profile logo
+#         right_nav.addWidget(profile_logo)
+
+#         # Default user info (hidden initially)
+#         user = get_user_data()
+#         user_name = f"{user[1]} {user[2]}" if user else "Guest"
+#         self.user_name_label = QLabel(user_name)
+#         self.user_name_label.setStyleSheet("font-size:18px;font-weight:bold;")
+#         self.user_name_label.setVisible(False)  # Initially hidden
+#         right_nav.addWidget(self.user_name_label)
+
+#         self.logout_button = QPushButton("Logout")
+#         self.logout_button.setStyleSheet("padding:10px;font-size:15px;color:red;border:none")
+#         self.logout_button.clicked.connect(self.logout)
+#         self.logout_button.setVisible(False)  # Initially hidden
+#         right_nav.addWidget(self.logout_button)
+
+#         self.navBar.addLayout(left_nav)
+#         self.navBar.addLayout(right_nav)
+
+#         nav_container = QWidget()
+#         nav_container.setLayout(self.navBar)
+
+#         self.pages = QStackedWidget()
+#         for page_name in self.buttons.keys():
+#             page = QLabel(f"Welcome to {page_name}")
+#             page.setAlignment(Qt.AlignmentFlag.AlignCenter)
+#             self.pages.addWidget(page)
+
+#         main_layout = QVBoxLayout()
+#         main_layout.addWidget(nav_container)
+#         main_layout.addWidget(self.pages)
+
+#         container = QWidget()
+#         container.setLayout(main_layout)
+#         self.setCentralWidget(container)
+
+#     def toggle_profile_info(self, event):
+#         """Toggles the visibility of the user's name and logout button."""
+#         is_visible = self.user_name_label.isVisible()
+#         self.user_name_label.setVisible(not is_visible)
+#         self.logout_button.setVisible(not is_visible)
+
+#     def show_login_page(self):
+#         self.login_page = LoginPage(self)
+#         self.setCentralWidget(self.login_page)
+
+#     def show_main_window(self):
+#         self.init_ui()
+#         self.update_user_info()
+
+#     def update_user_info(self):
+#         user = get_user_data()
+#         user_name = f"{user[1]} {user[2]}" if user else "Guest"
+#         self.user_name_label.setText(user_name)
+
+#     def set_active_button(self, active_name):
+#         for name, btn in self.buttons.items():
+#             btn.setStyleSheet(self.default_btn_style)
+#         self.buttons[active_name].setStyleSheet(self.active_btn_style)
+#         self.pages.setCurrentIndex(list(self.buttons.keys()).index(active_name))
+
+#     def logout(self):
+#         confirm = QMessageBox.question(
+#             self,
+#             "Confirm Logout",
+#             "Are you sure you want to log out?",
+#             QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+#         )
+#         if confirm == QMessageBox.StandardButton.Yes:
+#             clear_user_data()
+#             self.show_login_page()
+
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -156,21 +398,34 @@ class MainWindow(QMainWindow):
         right_nav = QHBoxLayout()
 
         profile_logo = QLabel()
-        pixmp_profile = QPixmap(resource_path("assets/profile_icon.png"))
+        pixmp_profile = QPixmap(resource_path("assets/profile.png"))
         profile_logo.setPixmap(pixmp_profile.scaled(50, 50, Qt.AspectRatioMode.KeepAspectRatio))
         profile_logo.setStyleSheet("margin-right:10px")
+        profile_logo.mousePressEvent = self.toggle_profile_info  # Set the click event for profile logo
         right_nav.addWidget(profile_logo)
 
-        user = get_user_data()
-        user_name = f"{user[1]} {user[2]}" if user else "Guest"
-        self.user_name_label = QLabel(user_name)
-        self.user_name_label.setStyleSheet("font-size:18px;font-weight:bold;")
-        right_nav.addWidget(self.user_name_label)
+        # Create a container for the dropdown
+        self.profile_dropdown = QWidget()
+        self.profile_dropdown.setStyleSheet("background-color:white; border: 1px solid #ccc; padding: 10px;")
+        
+        profile_dropdown_layout = QVBoxLayout()
 
+        # User name label
+        self.user_name_label = QLabel()
+        self.update_user_info()  # Update user name from database
+        self.user_name_label.setStyleSheet("font-size:18px;font-weight:bold;")
+        profile_dropdown_layout.addWidget(self.user_name_label)
+
+        # Logout button
         self.logout_button = QPushButton("Logout")
         self.logout_button.setStyleSheet("padding:10px;font-size:15px;color:red;border:none")
         self.logout_button.clicked.connect(self.logout)
-        right_nav.addWidget(self.logout_button)
+        profile_dropdown_layout.addWidget(self.logout_button)
+
+        self.profile_dropdown.setLayout(profile_dropdown_layout)
+        self.profile_dropdown.setVisible(False)  # Initially hidden
+
+        right_nav.addWidget(self.profile_dropdown)
 
         self.navBar.addLayout(left_nav)
         self.navBar.addLayout(right_nav)
@@ -191,6 +446,11 @@ class MainWindow(QMainWindow):
         container = QWidget()
         container.setLayout(main_layout)
         self.setCentralWidget(container)
+
+    def toggle_profile_info(self, event):
+        """Toggles the visibility of the dropdown with the user's name and logout button."""
+        is_visible = self.profile_dropdown.isVisible()
+        self.profile_dropdown.setVisible(not is_visible)
 
     def show_login_page(self):
         self.login_page = LoginPage(self)
