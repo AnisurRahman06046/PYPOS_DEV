@@ -1,0 +1,1 @@
+# Build : pyinstaller --onefile --add-data "assets:assets" fileName.py
