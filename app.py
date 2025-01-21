@@ -3,120 +3,92 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QHBoxLayout,
 from PyQt6.QtGui import QIcon ,QPixmap # Correct import for QIcon
 from PyQt6.QtCore import Qt 
 from resource_loader import resource_path
+
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
         self.setWindowTitle("POS")
-        # self.resize(800,600)
-        self.resize(1480,680)
+        self.resize(1480, 680)
 
         # navbar layout
-        navBar = QHBoxLayout()  # QHBoxLayout to arrange the buttons horizontally
+        navBar = QHBoxLayout()
 
         # Left side: Logo + Navigation buttons
         left_nav = QHBoxLayout()
-        # logo_label = QLabel("LOGO")  # Placeholder for your logo
-        logo_label= QLabel()
+        logo_label = QLabel()
         load_logo = resource_path("assets/logo.jpg")
-        # print(load_logo)
-        # pixmp_logo = QPixmap("assets/logo.jpg")
         pixmp_logo = QPixmap(load_logo)
-
-        logo_label.setStyleSheet("font-size: 20px; font-weight: bold; padding-right: 20px")
-        logo_label.setPixmap(pixmp_logo.scaled(100,100,Qt.AspectRatioMode.KeepAspectRatio,Qt.TransformationMode.SmoothTransformation))
+        logo_label.setPixmap(pixmp_logo.scaled(100, 100, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
         logo_label.setStyleSheet("padding-right:20px")
         left_nav.addWidget(logo_label)
 
-        # creating the navigation buttons
-        self.homeBtn = QPushButton("Home")
-        self.ordersBtn = QPushButton("Orders")
-        self.postBtn = QPushButton("POS Terminal")
-        self.productsBtn = QPushButton("Products")
-        self.customerBtn = QPushButton("Customers")
-        self.staffBtn = QPushButton("Staff")
-        self.settingBtn = QPushButton("Settings")
+        # Creating the navigation buttons
+        self.buttons = {
+            "Home": QPushButton("Home"),
+            "Orders": QPushButton("Orders"),
+            "POS Terminal": QPushButton("POS Terminal"),
+            "Products": QPushButton("Products"),
+            "Customers": QPushButton("Customers"),
+            "Staff": QPushButton("Staff"),
+            "Settings": QPushButton("Settings")
+        }
 
-        # design buttons
-        btn_style = "padding:10px;font-size:25px;border:none;color:black"
-        self.homeBtn.setStyleSheet(btn_style)
-        self.ordersBtn.setStyleSheet(btn_style)
-        self.postBtn.setStyleSheet(btn_style)
-        self.productsBtn.setStyleSheet(btn_style)
-        self.customerBtn.setStyleSheet(btn_style)
-        self.staffBtn.setStyleSheet(btn_style)
-        self.settingBtn.setStyleSheet(btn_style)
+        # Default and active styles
+        self.default_btn_style = "padding:10px;font-size:25px;border:none;color:black"
+        self.active_btn_style = "padding:10px;font-size:25px;border:none;color:blue"
 
-        # adding the buttons to the left navigation
-        left_nav.addWidget(self.homeBtn)
-        left_nav.addWidget(self.ordersBtn)
-        left_nav.addWidget(self.postBtn)
-        left_nav.addWidget(self.productsBtn)
-        left_nav.addWidget(self.customerBtn)
-        left_nav.addWidget(self.staffBtn)
-        left_nav.addWidget(self.settingBtn)
+        # Style and connect buttons
+        for name, btn in self.buttons.items():
+            btn.setStyleSheet(self.default_btn_style)
+            btn.clicked.connect(lambda checked, n=name: self.set_active_button(n))
+            left_nav.addWidget(btn)
 
-        # Add spacer to push items to the right
         left_nav.addSpacerItem(QSpacerItem(20, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum))
 
-        # Right side: Profile logo + Settings button
+        # Right side: Profile
         right_nav = QHBoxLayout()
-        
-        # Profile logo (as an icon or text placeholder)
-        profile_logo = QLabel("UserName")  
+        profile_logo = QLabel("UserName")
         profile_logo.setStyleSheet("font-size: 20px; padding-right: 10px")
         right_nav.addWidget(profile_logo)
-        
-        # Settings button
+
         self.prflBtn = QPushButton()
-        load_prflLogo = resource_path("assets/profile.png")
-        # profilePix = QPixmap("assets/profile.png")
-        profilePix = QPixmap(load_prflLogo)
-        profilePix = profilePix.scaled(40, 40, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
+        load_profile_logo = resource_path("assets/profile.png")
+        profilePix = QPixmap(load_profile_logo).scaled(40, 40, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
         self.prflBtn.setIcon(QIcon(profilePix))
         self.prflBtn.setIconSize(profilePix.size())
-        
-        self.prflBtn.setStyleSheet(btn_style)  # Apply the same button style as others
+        self.prflBtn.setStyleSheet(self.default_btn_style)
         right_nav.addWidget(self.prflBtn)
+        self.prflBtn.clicked.connect(lambda: self.set_active_button("Profile"))
 
-        # Add the left and right sections to the navbar
         navBar.addLayout(left_nav)
         navBar.addLayout(right_nav)
 
-        # wrapping the navbar in a container
         nav_container = QWidget()
         nav_container.setLayout(navBar)
         nav_container.setStyleSheet("background-color:#FFFFFF; padding:5px")
 
-        # creating pages
-        # QStackedWidget : to manage multiple pages, switching between them
-        self.pages = QStackedWidget()  # initialized the StackWidget
-        pagesTextList = ["Home Page", "PosTerminal page", "Orders Page", "Products page", "Customer page", "Staff Page","Setting page","Profile"]
+        # Pages
+        self.pages = QStackedWidget()
+        pagesTextList = ["Home Page", "Orders Page", "POS Terminal Page", "Products Page", "Customers Page", "Staff Page", "Settings Page", "Profile Page"]
 
         for c in pagesTextList:
             self.pages.addWidget(self.create_page(c))
 
-        self.homeBtn.clicked.connect(lambda: self.pages.setCurrentIndex(0))
-        self.ordersBtn.clicked.connect(lambda: self.pages.setCurrentIndex(1))
-        self.postBtn.clicked.connect(lambda: self.pages.setCurrentIndex(2))
-        self.productsBtn.clicked.connect(lambda: self.pages.setCurrentIndex(3))
-        self.customerBtn.clicked.connect(lambda: self.pages.setCurrentIndex(4))
-        self.staffBtn.clicked.connect(lambda: self.pages.setCurrentIndex(5))
-        self.settingBtn.clicked.connect(lambda: self.pages.setCurrentIndex(6))
-        self.prflBtn.clicked.connect(lambda:self.pages.setCurrentIndex(7))
-
-        # combine navbar and pages into a single layout
         main_layout = QVBoxLayout()
         main_layout.addWidget(nav_container)
         main_layout.addWidget(self.pages)
 
-        # final layout
         main_widget = QWidget()
         main_widget.setLayout(main_layout)
         self.setCentralWidget(main_widget)
         self.setStyleSheet("background-color:#e6e7e7")
 
-    # method to generate pages dynamically
+        # Set the default active button to "Home"
+        self.set_active_button("Home")
+
     def create_page(self, text):
         page = QWidget()
         layout = QVBoxLayout()
@@ -125,6 +97,21 @@ class MainWindow(QMainWindow):
         layout.addWidget(label)
         page.setLayout(layout)
         return page
+
+    def set_active_button(self, active_name):
+        # Reset all buttons to the default style
+        for name, btn in self.buttons.items():
+            btn.setStyleSheet(self.default_btn_style)
+
+        # Set the clicked button to the active style
+        if active_name in self.buttons:
+            self.buttons[active_name].setStyleSheet(self.active_btn_style)
+
+        # Update the stacked widget index
+        pages_mapping = list(self.buttons.keys()) + ["Profile"]
+        if active_name in pages_mapping:
+            self.pages.setCurrentIndex(pages_mapping.index(active_name))
+
 
 if __name__ == "__main__":
     app = QApplication([])
