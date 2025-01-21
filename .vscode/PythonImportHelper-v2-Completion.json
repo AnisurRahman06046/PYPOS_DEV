@@ -128,23 +128,7 @@
         "documentation": {}
     },
     {
-        "label": "QMessageBox",
-        "importPath": "PyQt6.QtWidgets",
-        "description": "PyQt6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtWidgets",
-        "documentation": {}
-    },
-    {
         "label": "QVBoxLayout",
-        "importPath": "PyQt6.QtWidgets",
-        "description": "PyQt6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QLabel",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
         "isExtraImport": true,
@@ -160,7 +144,7 @@
         "documentation": {}
     },
     {
-        "label": "QTableWidgetItem",
+        "label": "QMessageBox",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
         "isExtraImport": true,
@@ -168,7 +152,7 @@
         "documentation": {}
     },
     {
-        "label": "QSizePolicy",
+        "label": "QTableWidgetItem",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
         "isExtraImport": true,
@@ -184,6 +168,46 @@
         "documentation": {}
     },
     {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSpacerItem",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSizePolicy",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QWidget",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
@@ -993,14 +1017,6 @@
     },
     {
         "label": "Qt",
-        "importPath": "PyQt6.QtCore",
-        "description": "PyQt6.QtCore",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "QSize",
         "importPath": "PyQt6.QtCore",
         "description": "PyQt6.QtCore",
         "isExtraImport": true,
@@ -1492,7 +1508,7 @@
         "kind": 6,
         "importPath": "ui.products",
         "description": "ui.products",
-        "peekOfCode": "class ProductPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        # Set up the layout and window\n        layout = QVBoxLayout()\n        # create table for widgets\n        self.product_table = QTableWidget()\n        self.product_table.setColumnCount(3)\n        self.product_table.setHorizontalHeaderLabels([\"Id\",\"Name\",\"Vat\"])\n        self.product_table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)",
+        "peekOfCode": "class ProductPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        # Pagination variables\n        self.current_page = 1\n        self.rows_per_page = 10\n        self.all_products = []  # Store all products fetched from the API\n        # Set up the layout and window\n        layout = QVBoxLayout()\n        # Create table widget for products",
         "detail": "ui.products",
         "documentation": {}
     },
