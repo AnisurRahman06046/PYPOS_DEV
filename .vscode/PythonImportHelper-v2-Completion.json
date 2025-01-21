@@ -1,103 +1,6 @@
 [
     {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
-        "label": "QUrl",
-        "importPath": "PyQt6.QtCore",
-        "description": "PyQt6.QtCore",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "Qt",
-        "importPath": "PyQt6.QtCore",
-        "description": "PyQt6.QtCore",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "Qt",
-        "importPath": "PyQt6.QtCore",
-        "description": "PyQt6.QtCore",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "Qt",
-        "importPath": "PyQt6.QtCore",
-        "description": "PyQt6.QtCore",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "Qt",
-        "importPath": "PyQt6.QtCore",
-        "description": "PyQt6.QtCore",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "Qt",
-        "importPath": "PyQt6.QtCore",
-        "description": "PyQt6.QtCore",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "Qt",
-        "importPath": "PyQt6.QtCore",
-        "description": "PyQt6.QtCore",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "QNetworkAccessManager",
-        "importPath": "PyQt6.QtNetwork",
-        "description": "PyQt6.QtNetwork",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtNetwork",
-        "documentation": {}
-    },
-    {
-        "label": "QNetworkRequest",
-        "importPath": "PyQt6.QtNetwork",
-        "description": "PyQt6.QtNetwork",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtNetwork",
-        "documentation": {}
-    },
-    {
-        "label": "QNetworkReply",
-        "importPath": "PyQt6.QtNetwork",
-        "description": "PyQt6.QtNetwork",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtNetwork",
-        "documentation": {}
-    },
-    {
-        "label": "QApplication",
-        "importPath": "PyQt6.QtWidgets",
-        "description": "PyQt6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QLabel",
+        "label": "QWidget",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
         "isExtraImport": true,
@@ -113,7 +16,167 @@
         "documentation": {}
     },
     {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
         "isExtraImport": true,
@@ -489,6 +552,110 @@
         "documentation": {}
     },
     {
+        "label": "QTableWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QStackedWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSizePolicy",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QApplication",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
@@ -665,116 +832,11 @@
         "documentation": {}
     },
     {
-        "label": "for QIcon",
-        "importPath": "PyQt6.QtGui import QIcon .QPixmap # Correct",
-        "description": "PyQt6.QtGui import QIcon .QPixmap # Correct",
+        "label": "getToken",
+        "importPath": "utils.get_token",
+        "description": "utils.get_token",
         "isExtraImport": true,
-        "detail": "PyQt6.QtGui import QIcon .QPixmap # Correct",
-        "documentation": {}
-    },
-    {
-        "label": "resource_path",
-        "importPath": "resource_loader",
-        "description": "resource_loader",
-        "isExtraImport": true,
-        "detail": "resource_loader",
-        "documentation": {}
-    },
-    {
-        "label": "resource_path",
-        "importPath": "resource_loader",
-        "description": "resource_loader",
-        "isExtraImport": true,
-        "detail": "resource_loader",
-        "documentation": {}
-    },
-    {
-        "label": "QIcon",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QPixmap",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QIcon",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QPixmap",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QIcon",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QPixmap",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QIcon",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QPixmap",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QIcon",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "QPixmap",
-        "importPath": "PyQt6.QtGui",
-        "description": "PyQt6.QtGui",
-        "isExtraImport": true,
-        "detail": "PyQt6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "sqlite3",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sqlite3",
-        "description": "sqlite3",
-        "detail": "sqlite3",
+        "detail": "utils.get_token",
         "documentation": {}
     },
     {
@@ -787,6 +849,320 @@
         "documentation": {}
     },
     {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "for QIcon",
+        "importPath": "PyQt6.QtGui import QIcon .QPixmap # Correct",
+        "description": "PyQt6.QtGui import QIcon .QPixmap # Correct",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui import QIcon .QPixmap # Correct",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "resource_path",
+        "importPath": "resource_loader",
+        "description": "resource_loader",
+        "isExtraImport": true,
+        "detail": "resource_loader",
+        "documentation": {}
+    },
+    {
+        "label": "resource_path",
+        "importPath": "resource_loader",
+        "description": "resource_loader",
+        "isExtraImport": true,
+        "detail": "resource_loader",
+        "documentation": {}
+    },
+    {
+        "label": "resource_path",
+        "importPath": "resource_loader",
+        "description": "resource_loader",
+        "isExtraImport": true,
+        "detail": "resource_loader",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "ProductPage",
+        "importPath": "ui.products",
+        "description": "ui.products",
+        "isExtraImport": true,
+        "detail": "ui.products",
+        "documentation": {}
+    },
+    {
+        "label": "ProductPage",
+        "importPath": "ui.products",
+        "description": "ui.products",
+        "isExtraImport": true,
+        "detail": "ui.products",
+        "documentation": {}
+    },
+    {
+        "label": "OrderPage",
+        "importPath": "ui.orders",
+        "description": "ui.orders",
+        "isExtraImport": true,
+        "detail": "ui.orders",
+        "documentation": {}
+    },
+    {
+        "label": "OrderPage",
+        "importPath": "ui.orders",
+        "description": "ui.orders",
+        "isExtraImport": true,
+        "detail": "ui.orders",
+        "documentation": {}
+    },
+    {
+        "label": "HomePage",
+        "importPath": "ui.home",
+        "description": "ui.home",
+        "isExtraImport": true,
+        "detail": "ui.home",
+        "documentation": {}
+    },
+    {
+        "label": "HomePage",
+        "importPath": "ui.home",
+        "description": "ui.home",
+        "isExtraImport": true,
+        "detail": "ui.home",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerPage",
+        "importPath": "ui.customers",
+        "description": "ui.customers",
+        "isExtraImport": true,
+        "detail": "ui.customers",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerPage",
+        "importPath": "ui.customers",
+        "description": "ui.customers",
+        "isExtraImport": true,
+        "detail": "ui.customers",
+        "documentation": {}
+    },
+    {
+        "label": "StaffPage",
+        "importPath": "ui.staffs",
+        "description": "ui.staffs",
+        "isExtraImport": true,
+        "detail": "ui.staffs",
+        "documentation": {}
+    },
+    {
+        "label": "StaffPage",
+        "importPath": "ui.staffs",
+        "description": "ui.staffs",
+        "isExtraImport": true,
+        "detail": "ui.staffs",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsPage",
+        "importPath": "ui.settings",
+        "description": "ui.settings",
+        "isExtraImport": true,
+        "detail": "ui.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsPage",
+        "importPath": "ui.settings",
+        "description": "ui.settings",
+        "isExtraImport": true,
+        "detail": "ui.settings",
+        "documentation": {}
+    },
+    {
+        "label": "PosTerminalPage",
+        "importPath": "ui.pos",
+        "description": "ui.pos",
+        "isExtraImport": true,
+        "detail": "ui.pos",
+        "documentation": {}
+    },
+    {
+        "label": "PosTerminalPage",
+        "importPath": "ui.pos",
+        "description": "ui.pos",
+        "isExtraImport": true,
+        "detail": "ui.pos",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -796,12 +1172,75 @@
         "documentation": {}
     },
     {
-        "label": "ApiFetcher",
+        "label": "CustomerPage",
         "kind": 6,
-        "importPath": "api",
-        "description": "api",
-        "peekOfCode": "class ApiFetcher(QWidget):\n    def __init__(self):\n        super().__init__()\n        # Initialize API token\n        self.api_token = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoic3RhZmYiLCJmaXJzdE5hbWUiOiJadWxrYXIiLCJsYXN0X25hbWUiOiJOaW5lIiwiZW1haWwiOiJ6bnM2MDFAZ21haWwuY29tIiwicGhvbmUiOiIwMTg2OTA4NDYyMCIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJpYXQiOjE3MzcyODQ2MjMsImV4cCI6MTgzMTk1NzQyM30.mJx4Jcm0PZ2w1u1KI2jWz9_oIaYfh6l0Hayr83MhbUs\"\n        self.manager = QNetworkAccessManager(self)\n        self.manager.finished.connect(self.on_finished)\n        # Set up the UI\n        self.init_ui()\n    def init_ui(self):",
-        "detail": "api",
+        "importPath": "ui.customers",
+        "description": "ui.customers",
+        "peekOfCode": "class CustomerPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        title = QLabel(\"Welcome to Customer Page\")\n        layout.addWidget(title)\n        self.setLayout(layout)",
+        "detail": "ui.customers",
+        "documentation": {}
+    },
+    {
+        "label": "HomePage",
+        "kind": 6,
+        "importPath": "ui.home",
+        "description": "ui.home",
+        "peekOfCode": "class HomePage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        title = QLabel(\"Home Page\")\n        layout.addWidget(title)\n        self.setWindowTitle(\"Home\")\n        self.setLayout(layout)",
+        "detail": "ui.home",
+        "documentation": {}
+    },
+    {
+        "label": "OrderPage",
+        "kind": 6,
+        "importPath": "ui.orders",
+        "description": "ui.orders",
+        "peekOfCode": "class OrderPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout= QVBoxLayout()\n        # create table widget to display orders\n        self.orders_table = QTableWidget()\n        self.orders_table.setColumnCount(6)\n        self.orders_table.setHorizontalHeaderLabels([\"ID\",\"Order Date\",\"Customer Name\",\"Customer Phone\",\"Discount Type\",\"Discount Value\",\"Total Price\"])\n        self.orders_table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)\n        layout.addWidget(self.orders_table)",
+        "detail": "ui.orders",
+        "documentation": {}
+    },
+    {
+        "label": "PosTerminalPage",
+        "kind": 6,
+        "importPath": "ui.pos",
+        "description": "ui.pos",
+        "peekOfCode": "class PosTerminalPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"POS Terminal\")\n        layout = QVBoxLayout()\n        title = QLabel(\"Welcome to Pos Terminal\")\n        layout.addWidget(title)\n        self.setLayout(layout)",
+        "detail": "ui.pos",
+        "documentation": {}
+    },
+    {
+        "label": "ProductPage",
+        "kind": 6,
+        "importPath": "ui.products",
+        "description": "ui.products",
+        "peekOfCode": "class ProductPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        self.setWindowTitle(\"Product Page\")\n        title = QLabel(\"Welcome to the Product Page!\")\n        layout.addWidget(title)\n        self.setLayout(layout)",
+        "detail": "ui.products",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsPage",
+        "kind": 6,
+        "importPath": "ui.settings",
+        "description": "ui.settings",
+        "peekOfCode": "class SettingsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Settings\")\n        layout = QVBoxLayout()\n        title = QLabel(\"Welcome to Setting Page\")\n        layout.addWidget(title)\n        self.setLayout(layout)",
+        "detail": "ui.settings",
+        "documentation": {}
+    },
+    {
+        "label": "StaffPage",
+        "kind": 6,
+        "importPath": "ui.staffs",
+        "description": "ui.staffs",
+        "peekOfCode": "class StaffPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        title = QLabel(\"Welcome to Staff page\")\n        layout.addWidget(title)\n        self.setWindowTitle(\"Staff\")\n        self.setLayout(layout)",
+        "detail": "ui.staffs",
+        "documentation": {}
+    },
+    {
+        "label": "getToken",
+        "kind": 2,
+        "importPath": "utils.get_token",
+        "description": "utils.get_token",
+        "peekOfCode": "def getToken():\n    # Path to your local SQLite database\n    db_path = \"local_db.sqlite\"\n        # Connect to the database\n    conn = sqlite3.connect(db_path)\n    cursor = conn.cursor()\n        # Query to fetch the token\n    cursor.execute(\"SELECT access_token FROM users LIMIT 1\")\n    result = cursor.fetchone()\n    token = result[0]  # Retrieve the token value from the query result",
+        "detail": "utils.get_token",
         "documentation": {}
     },
     {
@@ -879,18 +1318,63 @@
     {
         "label": "LoginPage",
         "kind": 6,
-        "importPath": "p",
-        "description": "p",
+        "importPath": "main",
+        "description": "main",
         "peekOfCode": "class LoginPage(QWidget):\n    def __init__(self, parent):\n        super().__init__()\n        self.parent = parent\n        self.setWindowTitle(\"Login\")\n        layout = QVBoxLayout()\n        self.email_input = QLineEdit()\n        self.email_input.setPlaceholderText(\"Email\")\n        self.password_input = QLineEdit()\n        self.password_input.setPlaceholderText(\"Password\")",
-        "detail": "p",
+        "detail": "main",
         "documentation": {}
     },
     {
-        "label": "OrderPage",
+        "label": "MainWindow",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"POS\")\n        self.resize(1480, 680)\n        self.navBar = None\n        self.pages = None\n        self.user_name_label = None\n        self.logout_button = None\n        self.buttons = {}",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "create_database",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def create_database():\n    conn = sqlite3.connect(\"local_db.sqlite\")\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        CREATE TABLE IF NOT EXISTS users (\n            id INTEGER PRIMARY KEY,\n            first_name TEXT,\n            last_name TEXT,\n            email TEXT UNIQUE,\n            phone TEXT,",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_data",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_user_data():\n    conn = sqlite3.connect(\"local_db.sqlite\")\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT * FROM users LIMIT 1\")\n    user = cursor.fetchone()\n    conn.close()\n    return user\ndef save_user_data(user_data):\n    conn = sqlite3.connect(\"local_db.sqlite\")\n    cursor = conn.cursor()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "save_user_data",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def save_user_data(user_data):\n    conn = sqlite3.connect(\"local_db.sqlite\")\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        INSERT INTO users (id, first_name, last_name, email, phone, gender, status, access_token)\n        VALUES (?, ?, ?, ?, ?, ?, ?, ?)\n    \"\"\", (\n        user_data['user']['id'],\n        user_data['user']['firstName'],\n        user_data['user']['lastName'],",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "clear_user_data",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def clear_user_data():\n    conn = sqlite3.connect(\"local_db.sqlite\")\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM users\")\n    conn.commit()\n    conn.close()\n# Login Page\nclass LoginPage(QWidget):\n    def __init__(self, parent):\n        super().__init__()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "LoginPage",
         "kind": 6,
         "importPath": "p",
         "description": "p",
-        "peekOfCode": "class OrderPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout= QVBoxLayout()\n        # create table widget to display orders\n        self.orders_table = QTableWidget()\n        self.orders_table.setColumnCount(6)\n        self.orders_table.setHorizontalHeaderLabels([\"ID\",\"Order Date\",\"Customer Name\",\"Customer Phone\",\"Discount Type\",\"Discount Value\",\"Total Price\"])\n        self.orders_table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)\n        layout.addWidget(self.orders_table)",
+        "peekOfCode": "class LoginPage(QWidget):\n    def __init__(self, parent):\n        super().__init__()\n        self.parent = parent\n        self.setWindowTitle(\"Login\")\n        layout = QVBoxLayout()\n        self.email_input = QLineEdit()\n        self.email_input.setPlaceholderText(\"Email\")\n        self.password_input = QLineEdit()\n        self.password_input.setPlaceholderText(\"Password\")",
         "detail": "p",
         "documentation": {}
     },
@@ -935,16 +1419,7 @@
         "kind": 2,
         "importPath": "p",
         "description": "p",
-        "peekOfCode": "def clear_user_data():\n    conn = sqlite3.connect(\"local_db.sqlite\")\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM users\")\n    conn.commit()\n    conn.close()\n# def getToken():\n#     token = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoic3RhZmYiLCJmaXJzdE5hbWUiOiJadWxrYXIiLCJsYXN0X25hbWUiOiJOaW5lIiwiZW1haWwiOiJ6bnM2MDFAZ21haWwuY29tIiwicGhvbmUiOiIwMTg2OTA4NDYyMCIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJpYXQiOjE3MzczNDMwNDcsImV4cCI6MTgzMjAxNTg0N30.1W_cAWF-lOh-pYb20R89ByGJ-JfdbqAYnQQt5XoDDx8\"\n#     return token\ndef getToken():",
-        "detail": "p",
-        "documentation": {}
-    },
-    {
-        "label": "getToken",
-        "kind": 2,
-        "importPath": "p",
-        "description": "p",
-        "peekOfCode": "def getToken():\n    # Path to your local SQLite database\n    db_path = \"local_db.sqlite\"\n        # Connect to the database\n    conn = sqlite3.connect(db_path)\n    cursor = conn.cursor()\n        # Query to fetch the token\n    cursor.execute(\"SELECT access_token FROM users LIMIT 1\")\n    result = cursor.fetchone()\n    token = result[0]  # Retrieve the token value from the query result",
+        "peekOfCode": "def clear_user_data():\n    conn = sqlite3.connect(\"local_db.sqlite\")\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM users\")\n    conn.commit()\n    conn.close()\n# def getToken():\n#     # Path to your local SQLite database\n#     db_path = \"local_db.sqlite\"\n#         # Connect to the database",
         "detail": "p",
         "documentation": {}
     },
@@ -1036,6 +1511,15 @@
         "description": "t",
         "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.db = Database()\n        # Check if user is logged in\n        user = self.db.get_user()\n        if user:\n            self.init_main_ui()\n        else:\n            self.init_login_ui()",
         "detail": "t",
+        "documentation": {}
+    },
+    {
+        "label": "ProductPage",
+        "kind": 6,
+        "importPath": "tempCodeRunnerFile",
+        "description": "tempCodeRunnerFile",
+        "peekOfCode": "class ProductPage(QWidget):\n#     def __init__(self):\n#         super().__init__()\n#         layout = QVBoxLayout()\n#         self.setWindowTitle(\"Product\")\n#         title = QLabel(\"This is product page\")\n#         layout.addWidget(title)\n#         self.setLayout(layout)",
+        "detail": "tempCodeRunnerFile",
         "documentation": {}
     },
     {

@@ -1,4 +1,3 @@
-# updated code with the profile menu bar
 import sys
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QWidget,
@@ -17,9 +16,6 @@ from ui.staffs import StaffPage
 from ui.settings import SettingsPage
 from ui.pos import PosTerminalPage
 
-# Utility function for resource path handling
-# def resource_path(relative_path):
-#     return relative_path  # Update for packaged apps if needed.
 
 # Database setup
 def create_database():
@@ -73,25 +69,9 @@ def clear_user_data():
     cursor.execute("DELETE FROM users")
     conn.commit()
     conn.close()
-
-
-# def getToken():
-#     # Path to your local SQLite database
-#     db_path = "local_db.sqlite"
     
-#         # Connect to the database
-#     conn = sqlite3.connect(db_path)
-#     cursor = conn.cursor()
-
-#         # Query to fetch the token
-#     cursor.execute("SELECT access_token FROM users LIMIT 1")
-#     result = cursor.fetchone()
-
-
-#     token = result[0]  # Retrieve the token value from the query result
-#     return token
-            
-
+    
+    
 # Login Page
 class LoginPage(QWidget):
     def __init__(self, parent):
@@ -135,69 +115,8 @@ class LoginPage(QWidget):
             QMessageBox.critical(self, "Error", f"Failed to connect to the server: {e}")
 
 
-# class OrderPage(QWidget):
-#     def __init__(self):
-#         super().__init__()
-#         layout= QVBoxLayout()
-#         # create table widget to display orders
-#         self.orders_table = QTableWidget()
-#         self.orders_table.setColumnCount(6)
-#         self.orders_table.setHorizontalHeaderLabels(["ID","Order Date","Customer Name","Customer Phone","Discount Type","Discount Value","Total Price"])
-#         self.orders_table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
-#         layout.addWidget(self.orders_table)
-#         self.setLayout(layout)
-#         self.fetch_orders()
-    
-#     def fetch_orders(self):
-#         try:
-#             token = getToken()
-#             # print(f'{token}')
-#             if not token:
-#                 QMessageBox.warning(self,"Error","Unauthenticated")
-#                 return 
-#             headers = {"Authorization":f"Bearer {token}"}
-#             res = requests.get("https://anzaar-api.bitcommerz.com/api/v1/order/get-for-pos", headers=headers)
-#             # print(res.json())
-#             if res.status_code==200:
-#                 orders = res.json()
-#                 self.populate_orders_table(orders)
-#             else:
-#                 QMessageBox.warning(self,"Error","Failed to fetch data")
-            
-#         except Exception as e:
-#             QMessageBox.warning(self,"Error",f'{e}')
-#             print(f'{e}')
-
-#     def populate_orders_table(self,orders):
-#         self.orders_table.setRowCount(len(orders))
-
-#         for row_idx,order in enumerate(orders):
-#             self.orders_table.setItem(row_idx,0,QTableWidgetItem(str(order.get("id",""))))
-#             self.orders_table.setItem(row_idx,1,QTableWidgetItem(str(order.get("createdAt",""))))
-#             self.orders_table.setItem(row_idx,2,QTableWidgetItem(order.get("customer_name"," ")))
-#             self.orders_table.setItem(row_idx,3,QTableWidgetItem(order.get("customer_phone","")))
-#             self.orders_table.setItem(row_idx,4,QTableWidgetItem(order.get("discountType","")))
-#             self.orders_table.setItem(row_idx,5,QTableWidgetItem(str(order.get("discountAmount",""))))
-#             self.orders_table.setItem(row_idx,6,QTableWidgetItem(str(order.get("grandTotal",""))))
-#     # def init_ui(self):
-#     #     layout = QVBoxLayout()
-#     #     title_lable = QLabel("Order no 1234")
-#     #     layout.addWidget(title_lable)
-#     #     self.setLayout(layout)
 
 
-# class ProductPage(QWidget):
-#     def __init__(self):
-#         super().__init__()
-        
-#         layout = QVBoxLayout()
-        
-#         self.setWindowTitle("Product")
-#         title = QLabel("This is product page")
-#         layout.addWidget(title)
-#         self.setLayout(layout)
-        
-        
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -361,19 +280,3 @@ if __name__ == "__main__":
     main_window = MainWindow()
     main_window.show()
     sys.exit(app.exec())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
