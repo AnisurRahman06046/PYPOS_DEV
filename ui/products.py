@@ -934,26 +934,23 @@ class ProductPage(QWidget):
 
         # Style the table
         self.product_table.setStyleSheet("""
-            QTableWidget {
-                border: 1px solid #ccc;
-                font-size: 14px;
-                border-radius: 5px;
-            }
-            QTableWidget::item {
-                padding: 10px;
-                border: 1px solid #ddd;
-            }
+            
+            
             QHeaderView::section {
-                background-color: #f2f2f2;
+                background-color: #49A5AF;
                 font-weight: bold;
                 padding: 10px;
                 border: 1px solid #ddd;
                 color: black;
             }
-            QTableWidget::item:selected {
-                background-color: #0078d4;
-                color: white;
+            QTableWidget::horizontalHeader {
+                background-color: #49A5AF;
+                font-weight: bold;
+                padding: 10px;
+                border: 1px solid #ddd;
+                color: black;
             }
+           
         """)
 
         # Make columns stretch to fit the window

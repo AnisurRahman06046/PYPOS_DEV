@@ -96,6 +96,46 @@
         "documentation": {}
     },
     {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSpacerItem",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSizePolicy",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QWidget",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
@@ -1490,7 +1530,7 @@
         "kind": 6,
         "importPath": "ui.orders",
         "description": "ui.orders",
-        "peekOfCode": "class OrderPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # Create table widget to display orders\n        self.orders_table = QTableWidget()\n        self.orders_table.setColumnCount(7)  # Adjust column count if necessary\n        self.orders_table.setHorizontalHeaderLabels(\n            [\n                \"ID\",",
+        "peekOfCode": "class OrderPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        # Pagination variables\n        self.current_page = 1\n        self.rows_per_page = 10\n        self.all_orders = []  # Store all orders fetched from the API\n        layout = QVBoxLayout()\n        # Create table widget to display orders\n        self.orders_table = QTableWidget()",
         "detail": "ui.orders",
         "documentation": {}
     },
