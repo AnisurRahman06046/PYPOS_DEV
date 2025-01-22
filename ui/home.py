@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QWidget, QGridLayout, QPushButton, QApplication
 from PyQt6.QtGui import QIcon,QFont
 from PyQt6.QtCore import QSize,Qt
 import sys
-
+from resource_loader import resource_path
 class HomePage(QWidget):
     def __init__(self):
         super().__init__()
@@ -14,20 +14,20 @@ class HomePage(QWidget):
 
         # Button configurations
         buttons = [
-            ("assets/icons/pos.png", "POS Terminal"),
-            ("assets/icons/orders.png", "Orders"),
-            ("assets/icons/products.png", "Products"),
-            ("assets/icons/customers.png", "Customers"),
-            ("assets/icons/staffs.png", "Staff"),
-            ("assets/icons/settings.png", "Settings"),
-            ("assets/icons/regC.png", "Register Close"),
-            ("assets/icons/logout.png", "Logout"),
+            ("assets/pos.png", "POS Terminal"),
+            ("assets/orders.png", "Orders"),
+            ("assets/products.png", "Products"),
+            ("assets/customers.png", "Customers"),
+            ("assets/staffs.png", "Staff"),
+            ("assets/settings.png", "Settings"),
+            ("assets/regC.png", "Register Close"),
+            ("assets/logout.png", "Logout"),
         ]
 
         # Add buttons to the grid
         for i, (icon_path, text) in enumerate(buttons):
             button = QPushButton()
-            button.setIcon(QIcon(icon_path))
+            button.setIcon(QIcon(resource_path(icon_path)))
             button.setIconSize(QSize(60, 60))
             button.setText(text)
             button.setFont(QFont("Times",15))
