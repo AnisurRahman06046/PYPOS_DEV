@@ -67,7 +67,7 @@ from PyQt6.QtWidgets import (
     QListWidget, QGridLayout
 )
 from PyQt6.QtCore import Qt,QSize
-from PyQt6.QtGui import QFont
+from PyQt6.QtGui import QFont,QIcon
 
 class PosTerminalPage(QWidget):
     def __init__(self):
@@ -93,6 +93,8 @@ class PosTerminalPage(QWidget):
         grid.setColumnStretch(1, 1)  # Right section gets 1 part
 
         self.setLayout(grid)
+    
+
 
     def create_product_section(self):
         """Create the left section with search bar and product list."""
@@ -101,15 +103,25 @@ class PosTerminalPage(QWidget):
 
         # Search bar
         search_bar_layout = QHBoxLayout()
-        # search_label = QLabel("Search Product:")
-        search_input = QLineEdit()
-        search_input.setPlaceholderText("Search by SKU, ID, or scan")
-        search_input.setFont(QFont("Times",14))
-        search_button = QPushButton("Search")
+        
+
+        # search input field
+        self.search_input = QLineEdit()
+        self.search_input.setPlaceholderText("Search by SKU, ID, or Scan")
+        self.search_input.setFont(QFont("Times",14))
+        self.search_input.setStyleSheet("padding:5px;background-color:#F3F3F3;color:black;border:1px solid;border-radius:8px")
+
+        # clear button
+        clear_btn = QPushButton("Clear")
+        clear_btn.setIcon(QIcon("assets/icons/clr_btn.png"))
+        clear_btn.setFont(QFont("Times",15))
+        clear_btn.setStyleSheet("padding:5px;border:1px solid;border-radius:8px;background-color:#1DA4AF")
+        
+        clear_btn.clicked.connect(self.clear_btn_handler)
 
         # search_bar_layout.addWidget(search_label)
-        search_bar_layout.addWidget(search_input)
-        search_bar_layout.addWidget(search_button)
+        search_bar_layout.addWidget(self.search_input)
+        search_bar_layout.addWidget(clear_btn)
 
         # Product list
         product_list = QListWidget()
@@ -124,6 +136,10 @@ class PosTerminalPage(QWidget):
         product_section.setLayout(product_layout)
         return product_section
 
+
+
+    def clear_btn_handler(self):
+        self.search_input.clear()
     def create_cart_section(self):
         """Create the right section for the cart."""
         cart_section = QWidget()
