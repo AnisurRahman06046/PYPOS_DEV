@@ -138,7 +138,7 @@ class MainWindow(QMainWindow):
         # Left navigation section (logo and buttons)
         left_nav = QHBoxLayout()
         logo_label = QLabel()
-        pixmp_logo = QPixmap(resource_path("assets/logo.jpg"))
+        pixmp_logo = QPixmap(resource_path("assets/logo.png"))
         logo_label.setPixmap(pixmp_logo.scaled(100, 100, Qt.AspectRatioMode.KeepAspectRatio))
         logo_label.setStyleSheet("padding-right:20px")
         left_nav.addWidget(logo_label)
