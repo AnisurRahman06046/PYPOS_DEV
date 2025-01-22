@@ -84,7 +84,7 @@ from PyQt6.QtWidgets import QWidget, QGridLayout, QPushButton, QApplication
 from PyQt6.QtGui import QIcon,QFont
 from PyQt6.QtCore import QSize,Qt
 import sys
-
+from resource_loader import resource_path
 class HomePage(QWidget):
     def __init__(self):
         super().__init__()
@@ -109,7 +109,7 @@ class HomePage(QWidget):
         # Add buttons to the grid
         for i, (icon_path, text) in enumerate(buttons):
             button = QPushButton()
-            button.setIcon(QIcon(icon_path))
+            button.setIcon(QIcon(resource_path(icon_path)))
             button.setIconSize(QSize(60, 60))
             button.setText(text)
             button.setFont(QFont("Times",15))
