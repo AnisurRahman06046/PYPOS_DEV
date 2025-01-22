@@ -172,7 +172,7 @@ class MainWindow(QMainWindow):
         self.profile_logo = QLabel()
         pixmp_profile = QPixmap(resource_path("assets/profile.png"))
         self.profile_logo.setPixmap(pixmp_profile.scaled(50, 50, Qt.AspectRatioMode.KeepAspectRatio))
-        self.profile_logo.setStyleSheet("margin-right:10px; cursor: pointer;")
+        self.profile_logo.setStyleSheet("margin-right:10px;")
         self.profile_logo.mousePressEvent = self.toggle_profile_info  # Set the click event for profile logo
         right_nav.addWidget(self.profile_logo)
 
