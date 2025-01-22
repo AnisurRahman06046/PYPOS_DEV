@@ -122,6 +122,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("POS")
         self.resize(1480, 680)
+        # self.setGeometry()
         self.navBar = None
         self.pages = None
         self.user_name_label = None
