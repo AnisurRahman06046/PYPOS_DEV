@@ -55,7 +55,7 @@
 
 from PyQt6.QtWidgets import QWidget, QLineEdit, QPushButton, QVBoxLayout, QLabel, QMessageBox
 from PyQt6.QtCore import Qt, QFile, QTextStream
-from PyQt6.QtGui import QFont
+from PyQt6.QtGui import QFont,QIcon
 import requests
 from database.database import DatabaseManager
 
@@ -67,6 +67,7 @@ class LoginPage(QWidget):
         super().__init__()
         self.parent = parent  # Reference to MainWindow
         self.setGeometry(800, 300, 1000, 680)
+     
 
         login_layout = QVBoxLayout()
 

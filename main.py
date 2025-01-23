@@ -314,50 +314,6 @@ from database.database import DatabaseManager
 # Initialize database manager
 db_manager = DatabaseManager()
 
-
-# Login Page
-# class LoginPage(QWidget):
-#     def __init__(self, parent):
-#         super().__init__()
-#         self.parent = parent
-#         self.setWindowTitle("Login")
-#         layout = QVBoxLayout()
-
-#         self.email_input = QLineEdit()
-#         self.email_input.setPlaceholderText("Email")
-#         self.password_input = QLineEdit()
-#         self.password_input.setPlaceholderText("Password")
-#         self.password_input.setEchoMode(QLineEdit.EchoMode.Password)
-
-#         self.login_button = QPushButton("Login")
-#         self.login_button.clicked.connect(self.login)
-
-#         layout.addWidget(self.email_input)
-#         layout.addWidget(self.password_input)
-#         layout.addWidget(self.login_button)
-#         self.setLayout(layout)
-
-#     def login(self):
-#         email = self.email_input.text()
-#         password = self.password_input.text()
-
-#         if not email or not password:
-#             QMessageBox.warning(self, "Error", "Email and password cannot be empty.")
-#             return
-
-#         try:
-#             response = requests.post("https://anzaar-api.bitcommerz.com/api/v1/auth/admin/pos/login", json={"email": email, "password": password})
-#             if response.status_code == 201:
-#                 data = response.json()
-#                 db_manager.save_user_data(data)
-#                 QMessageBox.information(self, "Success", "Login successful.")
-#                 self.parent.show_main_window()
-#             else:
-#                 QMessageBox.warning(self, "Error", "Invalid credentials.")
-#         except Exception as e:
-#             QMessageBox.critical(self, "Error", f"Failed to connect to the server: {e}")
-
-
 # Main Window
 class MainWindow(QMainWindow):
     def __init__(self):
