@@ -58,7 +58,7 @@ from PyQt6.QtCore import Qt, QFile, QTextStream
 from PyQt6.QtGui import QFont,QIcon
 import requests
 from database.database import DatabaseManager
-
+from resource_loader import resource_path
 # Initialize database manager
 db_manager = DatabaseManager()
 
@@ -96,12 +96,14 @@ class LoginPage(QWidget):
         login_layout.addWidget(self.login_button)
 
         # Load CSS from external file
-        self.load_stylesheet("styles/login.qss")
+        self.load_stylesheet(resource_path("styles/login.qss"))
+        # self.load_stylesheet("styles/login.qss")
 
         login_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.setLayout(login_layout)
 
     def load_stylesheet(self, filename):
+        # print(filename)
         # Load the CSS file
         file = QFile(filename)
         if file.open(QFile.OpenModeFlag.ReadOnly | QFile.OpenModeFlag.Text):
