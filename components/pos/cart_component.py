@@ -58,9 +58,9 @@ class CartWindow(QWidget):
 
         # second section : table of contents
         product_list = QListWidget()
-        product_list.addItem("Product 1")
-        product_list.addItem("Product 2")
-        product_list.addItem("Product 3")
+        product_list.addItem("Cart Item 1")
+        product_list.addItem("Cart Item 2")
+        product_list.addItem("Cart Item 3")
 
 
         # third section : payment information : total, vat discount etc
