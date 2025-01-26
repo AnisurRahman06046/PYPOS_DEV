@@ -4,7 +4,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import Qt, QFile, QTextStream,QSize
 from PyQt6.QtGui import QFont,QIcon
-
+from components.pos.cart_component import CartWindow
 class PosTerminalPage(QWidget):
     def __init__(self):
         super().__init__()
@@ -53,9 +53,23 @@ class PosTerminalPage(QWidget):
 
         # brand and category
         self.brand = QComboBox()
+        # add items
+        self.brand.addItem("Westeen")
+        self.brand.addItem("Adidas")
+        self.brand.addItem("Nike")
+        self.brand.addItem("Reebok")
         self.brand.setPlaceholderText("Brand")
+
+
         self.category = QComboBox()
+        # add items
+        self.category.addItem("Shoes")
+        self.category.addItem("Clothing")
+        self.category.addItem("Accessories")
+        self.category.addItem("Fragrances")
         self.category.setPlaceholderText("Category")
+
+
 
         # clear button
         # clear_btn = QPushButton("Clear")
@@ -90,6 +104,9 @@ class PosTerminalPage(QWidget):
     def clear_btn_handler(self):
         self.search_input.clear()
     def create_cart_section(self):
+        cart  = CartWindow()
+        return cart
+        
         """Create the right section for the cart."""
         cart_section = QWidget()
         cart_layout = QVBoxLayout()
