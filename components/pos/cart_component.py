@@ -66,30 +66,39 @@ class CartWindow(QWidget):
         # third section : payment information : total, vat discount etc
         payment_info_layout = QHBoxLayout()
 
+        payment_info_container = QWidget()
+        payment_info_container.setStyleSheet("background-color:#333333;padding:10px;font-weight:bold;font-size:15px;")
+
         item_layout = QHBoxLayout()
 
         items_label = QLabel("Items")
         items_amount = QLabel("2")
         item_layout.addWidget(items_label)
         item_layout.addWidget(items_amount)
+        item_layout.setStretch(0,2)
+        # item_layout.setStretch(0,2)
 
-        toal_layout = QHBoxLayout()
+        total_layout = QHBoxLayout()
         total_label = QLabel("Total")
         total_amount = QLabel("$100.00")
-        toal_layout.addWidget(total_label)
-        toal_layout.addWidget(total_amount)
+        total_layout.addWidget(total_label)
+        total_layout.addWidget(total_amount)
+        total_layout.setStretch(0,2)
+        
 
         vat_layout = QHBoxLayout()
         vat_label = QLabel("VAT")
         vat_amount = QLabel("$20.00")
         vat_layout.addWidget(vat_label)
         vat_layout.addWidget(vat_amount)
+        vat_layout.setStretch(0,2)
 
         discount_layout = QHBoxLayout()
         discount_label = QLabel("Discount")
         discount_amount = QLabel("$10.00")
         discount_layout.addWidget(discount_label)
         discount_layout.addWidget(discount_amount)
+        discount_layout.setStretch(0,2)
 
 
         after_discount_layout = QHBoxLayout()
@@ -97,22 +106,29 @@ class CartWindow(QWidget):
         after_discount_price_amount = QLabel("$90.00")
         after_discount_layout.addWidget(after_discount_price)
         after_discount_layout.addWidget(after_discount_price_amount)
+        after_discount_layout.setStretch(0,10)
+        
 
 
         # after discount and vat layout
+        discount_vat_container = QWidget()
+        discount_vat_container.setStyleSheet("background-color:#333333;padding:10px;font-weight:bold;font-size:15px;")
         post_discount_price_vat_layout = QVBoxLayout()
 
         total_vat_layout = QHBoxLayout()
-        total_vat_price = QLabel("Total VAT")
+        total_vat_price_label = QLabel("Total VAT")
         total_vat_price_amount = QLabel("$20.00")
-        total_vat_layout.addWidget(total_vat_price)
+        total_vat_layout.addWidget(total_vat_price_label)
         total_vat_layout.addWidget(total_vat_price_amount)
+        total_vat_layout.setStretch(0,10)
+        
 
 
 
 
         post_discount_price_vat_layout.addLayout(after_discount_layout)
         post_discount_price_vat_layout.addLayout(total_vat_layout)
+        discount_vat_container.setLayout(post_discount_price_vat_layout)
 
         # payment_info_layout.addLayout(item_layout)
         # payment_info_layout.addLayout(toal_layout)
@@ -122,9 +138,10 @@ class CartWindow(QWidget):
 
         grid =QGridLayout()
         grid.addLayout(item_layout,0,0)
-        grid.addLayout(toal_layout,0,1)
+        grid.addLayout(total_layout,0,1)
         grid.addLayout(vat_layout,1,0)
         grid.addLayout(discount_layout,1,1)
+        payment_info_container.setLayout(grid)
         
         # grid.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -138,8 +155,10 @@ class CartWindow(QWidget):
 
         self.main_layout.addLayout(search_layout)
         self.main_layout.addWidget(product_list)
-        self.main_layout.addLayout(grid)
-        self.main_layout.addLayout(post_discount_price_vat_layout)
+        # self.main_layout.addLayout(grid)
+        self.main_layout.addWidget(payment_info_container)
+        # self.main_layout.addLayout(post_discount_price_vat_layout)
+        self.main_layout.addWidget(discount_vat_container)
         self.setLayout(self.main_layout)
 
 
