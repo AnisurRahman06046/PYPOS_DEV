@@ -18,7 +18,7 @@ class PosTerminalPage(QWidget):
 
         # Left section: Product search and product list
         product_section = self.create_product_section()
-        product_section.setStyleSheet("padding:10px")
+        product_section.setStyleSheet("padding:10px;background-color:#EBEFF2")
         grid.addWidget(product_section, 0, 0)
 
         # Right section: Cart
