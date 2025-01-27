@@ -352,6 +352,32 @@ class CartWindow(QWidget):
         checkout_button = QPushButton("Checkout")
 
 
+        # fourth section : button ,hold,cancel and final price
+        payment_control_container = QWidget()
+        payment_control_container.setStyleSheet("background-color:#605CA8;padding:10px;font-weight:bold;font-size:15px;color:white;")
+
+        payment_control_layout = QHBoxLayout()
+        
+        # payment_control_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.final_amount = 3000
+        final_price_label = QLabel(f"Total : {self.final_amount}")
+
+        hold_button = QPushButton("Hold")
+        hold_button.setStyleSheet("background-color:#FF890F;")
+        clear_button = QPushButton("Clear")
+        clear_button.setStyleSheet("background-color:#FF0000")
+        payment_button = QPushButton("Payment")
+        payment_button.setStyleSheet("background-color:#00A65A;")
+
+        payment_control_layout.addWidget(final_price_label)
+       
+        payment_control_layout.addWidget(hold_button)
+        payment_control_layout.addWidget(clear_button)
+        payment_control_layout.addWidget(payment_button)
+
+        payment_control_container.setLayout(payment_control_layout)
+
+
 
 
 
@@ -362,6 +388,7 @@ class CartWindow(QWidget):
         self.main_layout.addWidget(payment_info_container)
         # self.main_layout.addLayout(post_discount_price_vat_layout)
         self.main_layout.addWidget(discount_vat_container)
+        self.main_layout.addWidget(payment_control_container)
         self.setLayout(self.main_layout)
 
 
